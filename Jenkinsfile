@@ -1,5 +1,5 @@
 pipeline {
-    agent { none }
+    agent none
     stages {
         stages {
             agent {
@@ -31,7 +31,7 @@ pipeline {
             }
         }
         stage('Create Docker') {
-            agent { any }
+            agent any
             steps {
                 unstash "build-output"
                 script {

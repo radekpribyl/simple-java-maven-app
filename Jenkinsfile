@@ -26,7 +26,7 @@ pipeline {
             stage('Deliver') { 
                 steps {
                     sh './jenkins/scripts/deliver.sh'
-                    stash name: "build-output" includes: "target/*.jar"
+                    stash name: "build-output", includes: "target/*.jar"
                 }
             }
         }
